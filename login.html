@@ -17,6 +17,7 @@
     /*@import url(https://fonts.googleapis.com/css?family=Roboto:300);*/
 
     .login-page {
+
       width: 360px;
       padding: 8% 0 0;
       margin: auto;
@@ -66,6 +67,12 @@
     .form button:focus {
       background: #f9d0c4;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
     }
 
     .form .message {
@@ -143,7 +150,7 @@
   <div class="login-page">
     <div class="form">
       <form class="login-form">
-        <input type="text" placeholder="username" />
+        <input type="text" placeholder="username" autofocus/>
         <input type="password" placeholder="password" />
         <button>login</button>
 
