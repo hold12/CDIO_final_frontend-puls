@@ -7,6 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.pink-red.min.css" />
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -49,21 +50,26 @@
       </nav>
     </div>
     <main class="mdl-layout__content">
+      <div id="createbutton">
+        </br>
+        <button type="button" class="btn btn-success">Create</button>
+      </div>
+
+      <div class="table-responsive">
+        </br>
+        <table class="table">
+          <tr class="active" id="table-row">
+            <td id=table-column></td>
+          </tr>
+
+        </table>
+      </div>
 
     </main>
   </div>
   <script src="mainview.js"></script>
-  <script>
-    var links = [];
-    $(function() {
-      getPermissions(function(output) {
-        for (i = 0; i < output.length; i++) {
-          if (output[i] !== "weighing")
-            $("#side-nav-bar").append("<a href='#' class='mdl-navigation__link'>" + output[i] + "</a>")
-        }
-      });;
-    });
-  </script>
+  <script src="sidebar.js"></script>
+  <script src="maintable.js"></script>
 </body>
 
 </html>
