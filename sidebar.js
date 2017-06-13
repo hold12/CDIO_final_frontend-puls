@@ -60,7 +60,7 @@ $(function() {
       //   $("#side-nav-bar").append("<a href='#' class='mdl-navigation__link'>" + output[i] + "</a>")
       switch (output[i]) {
         case "productbatch.read":
-          $("#side-nav-bar").append("<a href='#' class='mdl-navigation__link'>Product Batch Administration</a>");
+          $("#side-nav-bar").append("<a id='product-batch-admin-viewBtn' class='mdl-navigation__link'>Product Batch Administration</a>");
           break;
         case "ingredientbatch.read":
           $("#side-nav-bar").append("<a href='#' class='mdl-navigation__link'>Ingredient Batch Administration</a>");
@@ -72,7 +72,7 @@ $(function() {
           $("#side-nav-bar").append("<a href='#' class='mdl-navigation__link'>ingredient Batch Administration</a>");
           break;
         case "user.read":
-          $("#side-nav-bar").append("<a href='#' class='mdl-navigation__link'>User Administration</a>");
+          $("#side-nav-bar").append("<a id='user-admin-viewBtn' class='mdl-navigation__link'>User Administration</a>");
           getUsers(userjson);
           break;
         case "recipe.read":
@@ -81,4 +81,8 @@ $(function() {
       }
     }
   });;
+});
+
+$("#user-admin-viewBtn").click(function() {
+  getUsers(userjson);
 });
